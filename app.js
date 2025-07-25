@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const author = contents[0].a;
 
         brdMessage.innerHTML = `
-          <div class="message-line1"> Happy Birthday🥳, <span style="color:#b6273fff;">${name}</span>!</div>
+          <div class="message-line1"> Happy Birthday, <span style="color:#b6273fff;">${name}</span>!</div>
           <div class="message-line2">"${quote}"<br> by ${author}</div>
         `;
       } else {  // Day counting 
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         brdMessage.innerHTML = `
           <div class="message-line1">Hi <span style="color:#b6273fff;">${name}</span>! \n <span style="color:#b6273fff;">${daysLeft}</span> Days Left</div>
-          <div class="message-line2">Until Your Birthday! 🎂</div>
+          <div class="message-line2">Until Your Birthday! </div>
         `;
       }
 
