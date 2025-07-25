@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const loginForm = document.getElementById("loginForm");
-  const signupForm = document.getElementById("signupForm");
+  const loginForm = document.getElementById("loginFm");
+  const signupForm = document.getElementById("signupFm");
   const signupBtn = document.getElementById("signupBtn");
   const backtoLoginBtn = document.getElementById("backtoLoginBtn");
   const signupConfirmBtn = document.getElementById("signupConfirmBtn");
@@ -55,8 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="message-line2">"${quote}"<br> by ${author}</div>
         `;
       } else {  // Day counting 
+        // if the birthday passes the current date, it makes the birthday a next year's date => prevent minus daysleft
         if (birthDateCurrentYear < today) birthDateCurrentYear.setFullYear(today.getFullYear() + 1);
 
+        // 100ms : 1 sec, 60sec x 60 min : 1 hour, x 24 hours = 1 day 
         const daysLeft = Math.ceil((birthDateCurrentYear - today) / (1000 * 60 * 60 * 24));
 
         brdMessage.innerHTML = `
